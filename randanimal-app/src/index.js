@@ -4,9 +4,17 @@ import "./index.css";
 import randomKitten from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+function newKitten() {
+  document.getElementById("kitten").innerHTML = randomKitten();
+}
+
 class RandomKitten extends React.Component {
   render() {
-    return randomKitten();
+    return (
+      <div>
+        <button onClick={newKitten}>Click for a random kitten</button>
+      </div>
+    );
   }
 }
 
