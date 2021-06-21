@@ -5,7 +5,8 @@ import randomKitten from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 function newKitten() {
-  document.getElementById("kitten").innerHTML = randomKitten();
+  console.log("Generating random kitten");
+  document.getElementById("kitten").src = "https://cataas.com/cat";
 }
 
 class RandomKitten extends React.Component {
@@ -13,6 +14,7 @@ class RandomKitten extends React.Component {
     return (
       <div>
         <button onClick={newKitten}>Click for a random kitten</button>
+        <img id="kitten" src-alt="Random kitten" />
       </div>
     );
   }
